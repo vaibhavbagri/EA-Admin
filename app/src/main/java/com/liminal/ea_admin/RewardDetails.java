@@ -1,13 +1,13 @@
 package com.liminal.ea_admin;
 
 public class RewardDetails {
-    String rid;
-    String title;
-    String description;
-    long cost;
-    long quantity;
+    private String rid;
+    private String title;
+    private String description;
+    private long cost;
+    private long quantity;
 
-    public RewardDetails(String rid, String title, String description, long cost, long quantity){
+    RewardDetails(String rid, String title, String description, long cost, long quantity){
         this.rid = rid;
         this.title = title;
         this.description = description;
@@ -15,23 +15,23 @@ public class RewardDetails {
         this.quantity = quantity;
     }
 
-    public String getRid(){
+    String getRid(){
         return rid;
     }
 
-    public String getTitle() {
+    String getTitle() {
         return title;
     }
 
-    public String getDescription() {
+    String getDescription() {
         return description;
     }
 
-    public long getCost(){
+    long getCost(){
         return cost;
     }
 
-    public long getQuantity() {
+    long getQuantity() {
         return quantity;
     }
 }

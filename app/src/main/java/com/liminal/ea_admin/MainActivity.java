@@ -27,6 +27,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 ValueEventListener idListener = new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.hasChild(account.getId()))
+                        if(dataSnapshot.hasChild(Objects.requireNonNull(account.getId())))
                         {
                             Log.d("EAG_GOOGLE_AUTH", "Signed in with account : " + account.getEmail());
                             updateUserProfile();

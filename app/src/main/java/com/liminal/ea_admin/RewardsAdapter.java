@@ -37,11 +37,11 @@ public class RewardsAdapter extends RecyclerView.Adapter<RewardsAdapter.MyViewHo
         return rewardDetailsList.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView title, description, cost, quantity;
+        TextView title, description, cost, quantity;
 
-        public MyViewHolder(@NonNull View itemView) {
+        MyViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.title);
             description = itemView.findViewById(R.id.description);
@@ -50,7 +50,7 @@ public class RewardsAdapter extends RecyclerView.Adapter<RewardsAdapter.MyViewHo
         }
     }
 
-    public RewardsAdapter(List<RewardDetails> rewardDetailsList){
+    RewardsAdapter(List<RewardDetails> rewardDetailsList){
         this.rewardDetailsList = rewardDetailsList;
     }
 }
